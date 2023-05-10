@@ -12,7 +12,7 @@ A user defined nucleotide sequence gets replicated in accordance with influenza 
 A numerical analysis to determine growth and population sizes of idealized populations can be performed using Numerical-Accessibility.ipynb. Here user defined relative fitness and accessibility are compared, and the sizes and average emergence times of new hypothetical populations are plotted.
 
 ## Network analysis
-From the output from the evolutionary simulations, the Newtork-population-sampling scripts create output files that can be uploaded into cytoscape to analyse as networks and create network visualisations. It takes source-target nucleotide sequences fomr simulations as input and calculates probability weights and outputs as csv for cytoscape or other network use.
+From the output from the evolutionary simulations, the Network-population-sampling scripts create output files that can be uploaded into cytoscape to analyse as networks and create network visualisations. It takes source-target nucleotide sequences fomr simulations as input and calculates probability weights and outputs as csv for cytoscape or other network use.
 
 ## Accessibility profiles
 Visualisation tool to create satellite plots for codon accessibility based on the probabilities calculated based on the probability function in CommonMotifProb.py
