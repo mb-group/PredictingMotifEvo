@@ -6,7 +6,7 @@
 import sys, getopt
 import numpy as np
 import random
-import csv
+import pandas as pd
 
 
 # In[42]:
@@ -408,11 +408,11 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv,"hi:o:",["ofile="])
     except getopt.GetoptError:
-        print 'test.py -o <outputfile>'
+        print ('test.py -o <outputfile>')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'test.py -o <outputfile>'
+            print( 'test.py -o <outputfile>')
             sys.exit()
         elif opt in ("-o", "--ofile"):
             outputfile = arg
@@ -488,10 +488,10 @@ if __name__ == "__main__":
         lenNewGen=len(nextgen)
         l+=1
 
-        with open(outputfile+'-gen'+str(l)+'.csv', 'wb') as myfile:
-            wr = csv.writer(myfile)
-            wr.writerow(alldata)
-        #FixDataDF=pd.DataFrame(alldata,columns=columns)
-        #FixDataDF.to_csv('Fixation-Sim-Full-gen'+str(l)+'.csv')
+        #with open(outputfile+'-gen'+str(l)+'.csv', 'wb') as myfile:
+        #    wr = csv.writer(myfile)
+        #    wr.writerow(alldata)
+        FixDataDF=pd.DataFrame(alldata,columns=columns)
+        FixDataDF.to_csv(outputfile+str(l)+'.csv')
 
 
